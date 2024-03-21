@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeftNav {
+public class LeftNav extends ParentPage{
     public LeftNav() {
         PageFactory.initElements(GWD.getDriver(),this);
     }
@@ -21,5 +21,6 @@ public class LeftNav {
 
     @FindBy(xpath = "(//span[text()='Citizenships'])[1]")
     public WebElement citizenship;
+
 
 }
