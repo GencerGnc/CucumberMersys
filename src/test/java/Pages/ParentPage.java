@@ -41,4 +41,13 @@ public class ParentPage {
         new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
         //sayfaya ESC tuşu gönderildi
     }
+//    public void deleteItem(String deleteName){
+//        mySendKeys(searchInput, deleteName);
+//        myClick(searchButton);
+//
+//        //search butonun tıklanabilir olana kadar bekle
+//        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+//
+//        myClick(deleteImageBtn);
+//        myClick(deleteDialogBtn);
 }
