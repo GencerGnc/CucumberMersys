@@ -32,8 +32,8 @@ public class _08_DataTableSteps {
 
         for(int i=0;i< strButtonList.size();i++) {
             //System.out.println(strLinkList.get(i));
-            WebElement linkWebElemnt= dc.getWebElement(strButtonList.get(i));
-            dc.myClick(linkWebElemnt);
+            Object linkWebElemnt= dc.getWebElement(strButtonList.get(i));
+            dc.myClick((WebElement) linkWebElemnt);
         }
     }
 
@@ -42,7 +42,7 @@ public class _08_DataTableSteps {
         List< List<String> > listTxtYazi= textBoxVeYazilar.asLists(String.class);
 
         for (int i = 0; i < listTxtYazi.size(); i++) {
-            WebElement txtBoxWebElemnt= dc.getWebElement(listTxtYazi.get(i).get(0));
+            WebElement txtBoxWebElemnt= (WebElement) dc.getWebElement(listTxtYazi.get(i).get(0));
             dc.mySendKeys(txtBoxWebElemnt, listTxtYazi.get(i).get(1));
         }
     }
@@ -68,4 +68,9 @@ public class _08_DataTableSteps {
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
     }
+
+
+
+
+
 }

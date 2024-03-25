@@ -51,6 +51,14 @@ public class DialogContent extends ParentPage {
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement deleteDialogBtn;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
+    public WebElement integrationCode;
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")
+    public WebElement priority;
+    @FindBy(xpath = "//ms-save-button[2]")
+    public WebElement saveAndclose;
+    @FindBy(xpath = "//*[@id=\"mat-mdc-slide-toggle-11-label\"]")
+    public WebElement spaceClick;
 
 
     public void deleteItem(String deleteName) {
@@ -64,7 +72,7 @@ public class DialogContent extends ParentPage {
         myClick(deleteDialogBtn);
     }
 
-    public WebElement getWebElement(String strElement) {
+    public Object getWebElement(String strElement) {
 
         switch (strElement) {
             case "addButton":
@@ -76,9 +84,17 @@ public class DialogContent extends ParentPage {
             case "saveButton":
                 return this.saveButton;
             case "shortName" :return this.shortName;
+            case "integrationCode":return this.integrationCode;
+            case "priority":return this.priority;
+            case "saveAndclose":return this.saveAndclose;
+            case "spaceClick":return this.spaceClick;
+
+
+
         }
 
         return null;
 
     }
+
 }

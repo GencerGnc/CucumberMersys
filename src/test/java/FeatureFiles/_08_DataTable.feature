@@ -51,24 +51,50 @@ Feature: DataTable Functionality
       | delalim14 |
     Then Success message should be displayed
 
-    Scenario: Create nationality and delete
+  Scenario: Create nationality and delete
 
-      And Click on the Element in LeftNav
-        | setup       |
-        | parameters  |
-        | nationality |
-      And Click on the Element in Dialog
-        | addButton |
+    And Click on the Element in LeftNav
+      | setup       |
+      | parameters  |
+      | nationality |
+    And Click on the Element in Dialog
+      | addButton |
 
-      And User sending the keys in Dialog
-        | nameInput | delalim20 |
-      And Click on the Element in Dialog
-        | saveButton |
-      Then Success message should be displayed
-      And User delete the Element from Dialog
-        | delalim20 |
-      Then Success message should be displayed
+    And User sending the keys in Dialog
+      | nameInput | delalim20 |
+    And Click on the Element in Dialog
+      | saveButton |
+    Then Success message should be displayed
+    And User delete the Element from Dialog
+      | delalim20 |
+    Then Success message should be displayed
 
-      Scenario: Fee Functionality and Delete
+  Scenario: Fee Functionality and Delete
+
+    And Click on the Element in LeftNav
+      | setup      |
+      | parameters |
+      | fees       |
+    And Click on the Element in Dialog
+      | addButton |
+
+
+    And User sending the keys in Dialog
+      | nameInput       | delalim212 |
+      | codeInput       | 06612  |
+      | integrationCode | 1299     |
+      | priority        | 489     |
+    And Click on the Element in Dialog
+      | spaceClick |
+
+    And Click on the Element in Dialog
+      | saveAndclose |
+
+    Then Success message should be displayed
+
+    And User delete the Element from Dialog
+      | delalim212 |
+    Then Success message should be displayed
+
 
 
