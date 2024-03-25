@@ -53,7 +53,7 @@ public class DialogContent extends ParentPage {
     public WebElement deleteDialogBtn;
 
 
-    public void deleteItem(String deleteName){
+    public void deleteItem(String deleteName) {
         mySendKeys(searchInput, deleteName);
         myClick(searchButton);
 
@@ -64,6 +64,21 @@ public class DialogContent extends ParentPage {
         myClick(deleteDialogBtn);
     }
 
+    public WebElement getWebElement(String strElement) {
 
+        switch (strElement) {
+            case "addButton":
+                return this.addButton;
+            case "nameInput":
+                return this.nameInput;
+            case "codeInput":
+                return this.codeInput;
+            case "saveButton":
+                return this.saveButton;
+            case "shortName" :return this.shortName;
+        }
 
+        return null;
+
+    }
 }
