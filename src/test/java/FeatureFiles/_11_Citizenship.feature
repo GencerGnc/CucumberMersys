@@ -24,7 +24,7 @@ Feature: Citizenship multiple values add and delete
 
     And User delete the Element from Dialog
       | <name> |
-
+    Then Success message should be displayed
     Examples:
       | name           | shortName   |
       | GGg1231234     | GncCS1short |

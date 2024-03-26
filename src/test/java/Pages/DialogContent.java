@@ -59,6 +59,10 @@ public class DialogContent extends ParentPage {
     public WebElement saveAndclose;
     @FindBy(xpath = "//*[@id=\"mat-mdc-slide-toggle-11-label\"]")
     public WebElement spaceClick;
+    @FindBy(xpath = "//mat-chip-list[@formcontrolname='roles' ]//input")
+    public WebElement userType;
+    @FindBy(xpath = "//span[@class=\"mat-option-text\"]")
+    public WebElement studentClick;
 
 
     public void deleteItem(String deleteName) {
@@ -88,6 +92,8 @@ public class DialogContent extends ParentPage {
             case "priority":return this.priority;
             case "saveAndclose":return this.saveAndclose;
             case "spaceClick":return this.spaceClick;
+            case "studentClick":return this.studentClick;
+            case "userType":return this.userType;
 
 
 
