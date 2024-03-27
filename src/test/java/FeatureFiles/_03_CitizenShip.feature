@@ -1,5 +1,5 @@
 Feature: Create a Citizenship
-  @SmokeTest
+  @SmokeTest @Regression
   Scenario: Create a CitizenShip
     Given Navigate to campus
     When Enter user name and password and click login button

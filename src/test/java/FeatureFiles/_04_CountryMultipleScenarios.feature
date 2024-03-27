@@ -4,7 +4,7 @@ Feature: Country Multi Secenerio
     When Enter user name and password and click login button
     Then User should successfully
     And Navigate to country
-
+    @Regression
     Scenario: Create a country
       When Create country
       Then Success message should be displayed
