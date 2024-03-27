@@ -6,7 +6,7 @@
 
 
 Feature: Login functionality
-
+  @SmokeTest
   Scenario: Login with valid username and password
 
     Given Navigate to campus
