@@ -8,7 +8,7 @@ Feature: Country Multi Secenerio
     Scenario: Create a country
       When Create country
       Then Success message should be displayed
-
+       @Regression
       Scenario: Create a country 2
         When Create country name as "Gencer" code as "UlkeKodtr"
         Then Success message should be displayed
