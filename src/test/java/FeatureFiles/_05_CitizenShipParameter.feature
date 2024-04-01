@@ -7,16 +7,16 @@ Feature: Multi Create a Citizenship
   Then User should successfully
   And Navigate to CitizenShip
 
-
+  @Regression
   Scenario: Create a CitizenShip
 
     When Create CitizenShip name as "Kakaa" code as "Latee"
     Then Success message should be displayed
-
+  @Regression
     Scenario: Create a Citizenship same name
       When Create CitizenShip name as "Kakaa" code as "Latee"
       Then Already message should be displayed
-
+  @Regression
       Scenario: Remove CitizenShip
         When User delete as name as "Kakaa"
         Then Success message should be displayed
