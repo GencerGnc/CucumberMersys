@@ -4,6 +4,7 @@ Feature: ApachePOI Citizen Functionality
     Given Navigate to campus
     When Enter user name and password and click login button
     Then User should successfully
+    And Navigate to CitizenShip
 
 
   Scenario: Create and Delete CitizenShip from excel
