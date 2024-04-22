@@ -36,6 +36,7 @@ public class _06_GetMetaData extends JDBCParent{
 
         int kolonSayisi= rsmd.getColumnCount();
         System.out.println("kolonSayisi = " + kolonSayisi);
+
         for (int i = 1; i <= kolonSayisi; i++) {
             System.out.println(rsmd.getColumnName(i));
         }
